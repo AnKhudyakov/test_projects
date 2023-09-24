@@ -1,0 +1,84 @@
+@import 'src/styles/constants';
+
+.row {
+  display: contents;
+
+  .column {
+    position: relative;
+    height: 60px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    padding: 0 9px;
+    border-top: 1px solid $border;
+  }
+
+  .btns {
+    position: relative;
+  }
+
+  .btns_bg {
+    position: relative;
+    display: flex;
+    gap: 12px;
+    padding: 6px;
+    background: transparent;
+    border-radius: 6px;
+    z-index: 100;
+    transition: background-color 0.2s;
+    &:hover {
+      background: $bg-light;
+    }
+    &:hover .delete_btn {
+      opacity: 1;
+    }
+  }
+
+  .btn {
+    display: flex;
+  }
+
+  .create_btn {
+    display: flex;
+    background-color: $bg-dark;
+  }
+
+  .delete_btn {
+    display: flex;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .line {
+    position: absolute;
+    bottom: 14px;
+    left: -6px;
+    width: 12px;
+    height: 60px;
+    border-left: 1px solid $bg-hover;
+    border-bottom: 1px solid $bg-hover;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .input {
+    width: 100%;
+    padding: 8px 10px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    border: 1px solid $border;
+    border-radius: 6px;
+    color: $text-secondary;
+  }
+
+  .submit,
+  .id {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  }
+}
